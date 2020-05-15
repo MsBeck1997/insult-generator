@@ -1,21 +1,255 @@
-function fetchSomething () {
+// Source for negative adjectives: https://www.englishclub.com/vocabulary/adjectives-personality-negative.htm
+let adjectives = [
+	aggressive
+	aloof
+	arrogant
+	belligerent
+	big-headed
+	bitchy
+	boastful
+	bone-idle
+	boring
+	bossy
+	callous
+	cantankerous
+	careless
+	changeable
+	clinging
+	compulsive
+	conservative
+	cowardly
+	cruel
+	cunning
+	cynical
+	deceitful
+	detached
+	dishonest
+	dogmatic
+	domineering
+	finicky
+	flirtatious
+	foolish
+	foolhardy
+	fussy
+	greedy
+	grumpy
+	gullible
+	harsh
+	impatient
+	impolite
+	impulsive
+	inconsiderate
+	inconsistent
+	indecisive
+	indiscreet
+	inflexible
+	interfering
+	intolerant
+	irresponsible
+	jealous
+	lazy
+	Machiavellian
+	materialistic
+	mean
+	miserly
+	moody
+	narrow-minded
+	nasty
+	naughty
+	nervous
+	obsessive
+	obstinate
+	overcritical
+	overemotional
+	parsimonious
+	patronizing
+	perverse
+	pessimistic
+	pompous
+	possessive
+	pusillanimous
+	quarrelsome
+	quick-tempered
+	resentful
+	rude
+	ruthless
+	sarcastic
+	secretive
+	selfish
+	self-centred
+	self-indulgent
+	silly
+	sneaky
+	stingy
+	stubborn
+	stupid
+	superficial
+	tactless
+	timid
+	touchy
+	thoughtless
+	truculent
+	unkind
+	unpredictable
+	unreliable
+	untidy
+	untrustworthy
+	vague
+	vain
+	vengeful
+	vulgar
+	weak-willed
+]
 
-	let result = fetch('')
-		.then(response => {
-			return response.json()
-		} )
+// Thanks to borlaym from github for the animals.json! https://gist.github.com/borlaym/585e2e09dd6abd9b0d0a
+let animal = [
+	"Aardvark",
+	"Alligator",
+	"Alpaca",
+	"Ant",
+	"Anteater",
+	"Antelope",
+	"Ape",
+	"Armadillo",
+	"Donkey",
+	"Baboon",
+	"Badger",
+	"Bat",
+	"Bear",
+	"Beaver",
+	"Bison",
+	"Boar",
+	"Buffalo",
+	"Camel",
+	"Caribou",
+	"Cat",
+	"Caterpillar",
+	"Cattle",
+	"Chicken",
+	"Chimpanzee",
+	"Clam",
+	"Cobra",
+	"Cockroach",
+	"Cod",
+	"Coyote",
+	"Crab",
+	"Crocodile",
+	"Deer",
+	"Dog",
+	"Dolphin",
+	"Duck",
+	"Eagle",
+	"Eel",
+	"Elephant",
+	"Elk",
+	"Emu",
+	"Ferret",
+	"Fish",
+	"Fox",
+	"Frog",
+	"Gerbil",
+	"Giraffe",
+	"Gnat",
+	"Goat",
+	"Goldfish",
+	"Goose",
+	"Gorilla",
+	"Grasshopper",
+	"Gull",
+	"Hippopotamus",
+	"Hornet",
+	"Horse",
+	"Hyena",
+	"Ibex",
+	"Jackal",
+	"Jellyfish",
+	"Kangaroo",
+	"Lemur",
+	"Llama",
+	"Lobster",
+	"Locust",
+	"Manatee",
+	"Mandrill",
+	"Mantis",
+	"Meerkat",
+	"Mole",
+	"Mongoose",
+	"Monkey",
+	"Moose",
+	"Mosquito",
+	"Mouse",
+	"Mule",
+	"Narwhal",
+	"Newt",
+	"Octopus",
+	"Opossum",
+	"Ostrich",
+	"Owl",
+	"Oyster",
+	"Parrot",
+	"Pelican",
+	"Penguin",
+	"Pig",
+	"Pigeon",
+	"Pony",
+	"Porcupine",
+	"Rabbit",
+	"Raccoon",
+	"Ram",
+	"Rat",
+	"Reindeer",
+	"Rhinoceros",
+	"Salamander",
+	"Salmon",
+	"Sardine",
+	"Scorpion",
+	"Seal",
+	"Sheep",
+	"Shrew",
+	"Skunk",
+	"Snail",
+	"Snake",
+	"Spider",
+	"Squid",
+	"Squirrel",
+	"Stingray",
+	"Stinkbug",
+	"Tapir",
+	"Termite",
+	"Toad",
+	"Trout",
+	"Turkey",
+	"Turtle",
+	"Vulture",
+	"Wallaby",
+	"Walrus",
+	"Wasp",
+	"Weasel",
+	"Whale",
+	"Wombat",
+	"Worm",
+	"Yak",
+	"Zebra"
+]
 
-		.then (printData => {
-			document.getElementById('target').innerHTML = text
-		} )
-}
+// Pulled from http://www.slate.com/blogs/lexicon_valley/2013/09/11/top_swear_words_most_popular_curse_words_on_facebook.html
+let cuss = [
+	"shit",
+	"fuck",
+	"bitch",
+	"piece of crap",
+	"dick",
+	"cock",
+	"pussy",
+	"asshole",
+	"fag",
+	"bastard",
+	"slut",
+	"douche"
+]
 
-
+/* You're such a (adjective) (animal), you (adjective) (cuss). */
 function printInsult () {
-	document.getElementById('')
+	document.getElementById('insultTarget').innerHTML =
 
 }
-
-<!--
-You're such a (adjective) (animal) (body part), you (adjective) (cuss) (rude term).
--->
