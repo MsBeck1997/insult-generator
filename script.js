@@ -231,8 +231,23 @@ let cuss = [
 	"douche"
 ]
 
-/* You're such a (adjective) (animal), you (adjective) (cuss). */
-function printInsult () {
-	document.getElementById('insultTarget').innerHTML =
 
+/* 1. select array length
+* 2. choose a random number (rounded) between 0 and one less than array.length
+* 3. return array index of random number */
+function randomArray(array) {
+	let length = array.length - 1
+
+}
+
+
+/* You're such a (adjective) (animal), you (adjective) (cuss). */
+/*1. Use randomizer to select 2 adjectives, 1 animal, and 1 cuss word.
+* 2. Select those as variables
+* 3. Call the variables into the insult layout
+* 4. print insult to dom */
+function createInsult () {
+
+
+	document.getElementById('insultTarget').innerHTML = insult
 }
