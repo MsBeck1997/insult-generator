@@ -1,3 +1,7 @@
+window.onload = function () {
+	createInsult()
+}
+
 // Source for negative adjectives: https://www.englishclub.com/vocabulary/adjectives-personality-negative.htm
 let adjectives = [
 	"aggressive",
@@ -232,22 +236,21 @@ let cuss = [
 ]
 
 
-/* 1. select array length
-* 2. choose a random number (rounded) between 0 and one less than array.length
-* 3. return array index of random number */
+/* Returns a random number between 0 - arrayLength */
 function randomArray(array) {
-	let length = array.length - 1
-
+	let arrayLength = array.length
+	return ( Math.floor(Math.random() * arrayLength) )
 }
 
-
-/* You're such a (adjective) (animal), you (adjective) (cuss). */
-/*1. Use randomizer to select 2 adjectives, 1 animal, and 1 cuss word.
-* 2. Select those as variables
-* 3. Call the variables into the insult layout
-* 4. print insult to dom */
+/* Prints generated insult to DOM */
 function createInsult () {
+	let firstRandomAdjective = adjectives[randomArray(adjectives)]
+	let randomAnimal = (animal[randomArray(animal)]).toLowerCase()
+	let secondRandomAdjective = adjectives[randomArray(adjectives)]
+	let randomCuss = cuss[randomArray(cuss)]
 
+	let insult = "You're such a " + firstRandomAdjective + " " + randomAnimal +
+		", you " + secondRandomAdjective + " " + randomCuss + "!"
 
 	document.getElementById('insultTarget').innerHTML = insult
 }
