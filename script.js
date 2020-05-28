@@ -46,7 +46,7 @@ let adjectives = [
 	"irresponsible",
 	"jealous",
 	"lazy",
-	"Machiavellian",
+	"machiavellian",
 	"mean",
 	"moody",
 	"narrow-minded",
@@ -229,7 +229,6 @@ let cuss = [
 	"cock",
 	"pussy",
 	"asshole",
-	"fag",
 	"bastard",
 	"slut",
 	"douche"
